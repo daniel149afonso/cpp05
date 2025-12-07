@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+.vscode
 
 # Compiled Object files
 *.slo
@@ -36,6 +37,6 @@
 *.exe
 *.out
 *.app
-
+slave
 # debug information files
 *.dwo
