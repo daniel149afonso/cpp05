@@ -6,9 +6,12 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/10 00:35:15 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/10 18:41:07 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include <iostream>
 #include <exception>
@@ -43,3 +46,4 @@ class Bureaucrat
 		};
 };
 
+#endif

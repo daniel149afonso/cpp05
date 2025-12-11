@@ -6,11 +6,12 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/10 14:13:31 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/10 19:52:31 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/Form.hpp"
 
 Bureaucrat::Bureaucrat():
 	_name("unknown")
@@ -66,6 +67,11 @@ void Bureaucrat::decrement_grade(const int number)
 		if (_grade > 150)
 			throw GradeTooLowException();
 		std::cout << _name << " bureaucrat grade decrements to "<< _grade << ".\n";
+}
+
+void Bureaucrat::signForm(Form& form)
+{
+	form.beSigned(*this);
 }
 
 std::string Bureaucrat::getName() const
