@@ -12,7 +12,7 @@ OBJ_DIR     = objs
 
 SRC         = $(SRC_DIR)/main.cpp \
 				$(SRC_DIR)/Bureaucrat.cpp \
-				$(SRC_DIR)/Form.cpp \
+				$(SRC_DIR)/AForm.cpp \
 				$(SRC_DIR)/ShrubberyCreationForm.cpp
 
 OBJ         = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)

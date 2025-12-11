@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 15:15:56 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/11 17:11:02 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ void Bureaucrat::decrement_grade(const int number)
 void Bureaucrat::signForm(AForm& form)
 {
 	form.beSigned(*this);
+}
+
+void Bureaucrat::executeForm(const AForm& form) const
+{
+	form.execute(*this);
 }
 
 std::string Bureaucrat::getName() const

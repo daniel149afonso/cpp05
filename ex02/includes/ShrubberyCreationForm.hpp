@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 15:00:51 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 15:33:45 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/11 22:14:15 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@
 class ShrubberyCreationForm: public AForm{
 	public:
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(const std::string name, const int gradeS, const int gradeE);
+		ShrubberyCreationForm(const std::string name);
 		ShrubberyCreationForm(const ShrubberyCreationForm& other);
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
 		~ShrubberyCreationForm();
+		void execute(Bureaucrat const & executor) const;
+
 };
 
 #endif

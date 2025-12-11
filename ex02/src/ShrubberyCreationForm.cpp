@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 15:00:33 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 16:06:21 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/11 22:14:51 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(): AForm("unknown", 145, 137)
 	std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string name, const int gradeS, const int gradeE): 
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string name): 
 	AForm(name, 145, 137)
 {
-	if (gradeS > 150 ||  gradeS > 150 )
-		throw GradeTooLowException();
-	else if (gradeS < 1 || gradeS < 1)
-		throw GradeTooHighException();
 	std::cout << "ShrubberyCreationForm Constructor called" << std::endl;
 }
 
@@ -49,4 +45,13 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 	std::cout << "ShrubberyCreationForm Destructor called"<<std::endl;
+}
+
+void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
+{
+	if (executor.getGrade() > _gradeExecuted)
+		throw GradeTooLowException();
+	if (_signed == false)
+		throw FormNotSigned();
+	std::cout << "Bureaucrat " << executor.getName() << " executed " << "form " << _name<<std::endl;
 }
