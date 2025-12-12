@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:45 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/08 20:35:03 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/12 15:10:28 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	invalid_grade()
 void	invalid_decrementation()
 {
 	std::cout << "\n\n### TESTING INVALID DECREMENTATION ###\n\n" << std::endl;
-	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	try {
 		Bureaucrat slave1("Sasuke", 50);
 		slave1.decrement_grade(200);
@@ -45,7 +44,6 @@ void	invalid_decrementation()
 void	invalid_incrementation()
 {
 	std::cout << "\n\n### TESTING INVALID INCREMENTATION ###\n\n" << std::endl;
-	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	try {
 		Bureaucrat slave1("Naruto", 50);
 		slave1.increment_grade(200);

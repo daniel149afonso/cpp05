@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 15:08:10 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 16:51:58 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/12/12 14:35:45 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@
 class PresidentialPardonForm: public AForm{
 	public:
 		PresidentialPardonForm();
-		PresidentialPardonForm(const std::string name, const int gradeS, const int gradeE);
+		PresidentialPardonForm(const std::string name);
 		PresidentialPardonForm(const PresidentialPardonForm& other);
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
 		~PresidentialPardonForm();
+		void execute(Bureaucrat const & executor) const;
 };
 
 #endif
