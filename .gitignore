@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 .vscode
+*_shrubbery
+
 
 # Compiled Object files
 *.slo
