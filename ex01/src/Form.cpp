@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 20:43:03 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 01:07:13 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/01/19 20:30:53 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Form::Form():
 	std::cout << "Form Default Constructor called" << std::endl;
 }
 
-Form::Form(const std::string name, const int gradeS, const int gradeE): 
+Form::Form(const std::string name, const int gradeS, const int gradeE):
 	_name(name),  _signed(false), _gradeSigned(gradeS), _gradeExecuted(gradeE)
 {
 	if (gradeS > 150 ||  gradeS > 150 )
@@ -77,12 +77,12 @@ int Form::get_gradeExecuted()const
 //Public method
 void Form::beSigned(const Bureaucrat& n)
 {
-	if (n.getGrade() < _gradeSigned)
+	if (n.getGrade() <= _gradeSigned)
 	{
 		_signed = true;
 		std::cout << "bureaucrat "<< n.getName() << " signed form "<< _name << "\n";
 	}
-	else 
+	else
 		throw GradeTooLowException();
 }
 

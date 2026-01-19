@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:45 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/12 14:28:05 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/01/19 20:31:48 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	invalid_signature()
 	Bureaucrat slave1("Daniel", 120);
 	Form form1("form1", 10, 100);
 	try {
-		
+
 		slave1.signForm(form1);
 	}
 	catch (const std::exception& e) {
@@ -37,7 +37,7 @@ void	valid_signature()
 	Bureaucrat slave1("Daniel", 2);
 	Form form1("form1", 10, 100);
 	try {
-		
+
 		slave1.signForm(form1);
 	}
 	catch (const std::exception& e) {
