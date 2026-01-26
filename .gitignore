@@ -2,7 +2,7 @@
 *.d
 .vscode
 *_shrubbery
-
+slave
 
 # Compiled Object files
 *.slo
