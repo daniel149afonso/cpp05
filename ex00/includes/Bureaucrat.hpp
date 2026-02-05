@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/10 18:41:07 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/05 16:25:02 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat
 		//getters setters
 		std::string getName(void) const;
 		int getGrade(void) const;
-		
+
 		//Class Exception
 		class GradeTooHighException : public std::exception {
 			const char * what() const throw();
@@ -45,5 +45,8 @@ class Bureaucrat
 			const char * what() const throw();
 		};
 };
+
+//Overloaded insertion operator
+std::ostream& operator<<(std::ostream& out, Bureaucrat& n);
 
 #endif

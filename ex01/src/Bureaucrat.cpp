@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/10 19:52:31 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/05 16:33:03 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Bureaucrat::Bureaucrat():
 {
 	_grade = 150;
 	std::cout << "Bureaucrat Default Constructor called"<<std::endl;
-	std::cout << _name << " bureaucrat grade "<< _grade << ".\n";
+	std::cout << (*this);
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade):
@@ -30,7 +30,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade):
 	else if (grade < 1)
 		throw GradeTooHighException();
 	std::cout << "Bureaucrat Constructor called"<<std::endl;
-	std::cout << _name << " bureaucrat grade "<< _grade << ".\n";
+	std::cout << (*this);
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other):
@@ -92,4 +92,11 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("grade is too low");
+}
+
+//Overloaded insertion operator
+std::ostream& operator<<(std::ostream& out, Bureaucrat& n)
+{
+	out << n.getName() << ", bureaucrat grade " << n.getGrade() << ".\n";
+	return (out);
 }

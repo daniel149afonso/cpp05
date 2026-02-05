@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:05:42 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 17:11:02 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/05 16:36:34 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,11 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("grade is too low");
+}
+
+//Overloaded insertion operator
+std::ostream& operator<<(std::ostream& out, Bureaucrat& n)
+{
+	out << n.getName() << ", bureaucrat grade " << n.getGrade() << ".\n";
+	return (out);
 }

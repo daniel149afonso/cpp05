@@ -6,7 +6,7 @@
 /*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 20:43:03 by daniel149af       #+#    #+#             */
-/*   Updated: 2026/01/19 20:30:53 by daafonso         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:25:16 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Form& Form::operator=(const Form& other)
 	if (this != &other)
 	{
 		//Copy only non-const attributes
-		_signed = true;
+		_signed = other.get_gradeSigned();
 	}
 	return (*this);
 }

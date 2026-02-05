@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 20:43:03 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/12/11 22:33:44 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/05 17:26:17 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ AForm::AForm():
 	std::cout << "AForm Default Constructor called" << std::endl;
 }
 
-AForm::AForm(const std::string name, const int gradeS, const int gradeE): 
+AForm::AForm(const std::string name, const int gradeS, const int gradeE):
 	_name(name),  _signed(false), _gradeSigned(gradeS), _gradeExecuted(gradeE)
 {
 	if (gradeS > 150 ||  gradeS > 150 )
@@ -43,7 +43,7 @@ AForm& AForm::operator=(const AForm& other)
 	if (this != &other)
 	{
 		//Copy only non-const attributes
-		_signed = true;
+		_signed = other.get_gradeSigned();
 	}
 	return (*this);
 }
@@ -82,7 +82,7 @@ void AForm::beSigned(const Bureaucrat& n)
 		_signed = true;
 		std::cout << "Bureaucrat " << n.getName() << " signed form "<< _name << "\n";
 	}
-	else 
+	else
 		throw GradeTooLowException();
 }
 
